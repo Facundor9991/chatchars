@@ -9,8 +9,9 @@ import { Server } from "socket.io";
 
 
 //------------CONSTANTES-------------
+const PORT = process.env.PORT || 9999
 const app = express()
-const httpServer = app.listen(9999, () => console.log("El proyecto esta corriendo"))
+const httpServer = app.listen(PORT, () => console.log("El proyecto esta corriendo"))
 const io = new Server(httpServer)
 const messages = []
 
